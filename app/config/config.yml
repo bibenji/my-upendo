@@ -79,12 +79,8 @@ bazinga_faker:
     orm: doctrine
     locale: fr
     
-    entities:
-        # AppBundle\Entity\Post:
-            # number: 10        
-        #AppBundle\Entity\Comment:
-        #    number: 5  
-        # AppBundle\Entity\Profile:
-            # number: 10
+    entities:        
         AppBundle\Entity\User:
             number: 10
+        # AppBundle\Entity\Profile:
+            # number: 10
