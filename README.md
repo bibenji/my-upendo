@@ -11,6 +11,20 @@ http://localhost/testing-graphql/web/app_dev.php/graphql?query={user(id:"00a8eef
 
 http://localhost/testing-graphql/web/app_dev.php/graphql?query={users{id,username,profile{id,description}}}
 
+MUTATIONS :
+
+mutation {
+  addUser(user: {username: "Bob", email: "bob@leponge.fr", gender: "male", phone: "0134752206", firstname: "Bob", lastname: "Leponge", region: "Paris"}) {
+    id,
+    username,
+    gender,
+    phone,
+    firstname,
+    lastname,
+    region
+  }
+}
+
 -------------------------------------------------------------------------------------------------
 
 Symfony Standard Edition

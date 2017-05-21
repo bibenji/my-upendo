@@ -43,6 +43,10 @@ class UserType extends AbstractObjectType
                 'type' => new StringType(),
                 'description' => "Lastname"
             ],
+			'region' => [
+                'type' => new StringType(),
+                'description' => "Region"
+            ],
 			'profile' => [
 				'type' => new ProfileType(),
 				'description' => "Profile"			

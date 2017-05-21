@@ -33,11 +33,11 @@ class PostType extends AbstractObjectType
             ],
             'updatedAt' => [
                 'type' => new DateTimeType("Y-m-d"),
-                'description' => "Dernière mise à jour"
+                'description' => "DerniÃ¨re mise Ã  jour"
             ],			
             'comments' => [
                 'type' => new ListType(new CommentType()),
-                'description' => "Commentaires liés"
+                'description' => "Commentaires liÃ©s"
             ],			
         ]);
 		
