@@ -1,0 +1,3 @@
+rootProject.name = 'UpendoMobile'
+
+include ':app'
