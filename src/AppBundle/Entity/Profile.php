@@ -4,6 +4,7 @@ namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Ramsey\Uuid\Uuid;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Profile
@@ -54,7 +55,16 @@ class Profile
 	
 	/**
 	 * @var array
-     * @ORM\Column(type="simple_array")
+     * @ORM\Column(type="simple_array")	 
+     * @Assert\Collection(
+     *     fields = {
+     *         "weight" = @Assert\Type(type="string"),
+     *         "size" = @Assert\Type(type="string"),
+     *         "eyes_color" = @Assert\Type(type="string"),
+     *         "hair_color" = @Assert\Type(type="string"),
+     *     },
+     *     allowMissingFields = true
+     * )     
 	 */
 	protected $profileData = [
         'weight' => null,
@@ -177,7 +187,7 @@ class Profile
         $this->profileData[$key] = $value;
     }
 	
-	public function getProfilesLikes()
+	public function getProfileLikes()
 	{
 		return $this->profileLikes;
 	}
